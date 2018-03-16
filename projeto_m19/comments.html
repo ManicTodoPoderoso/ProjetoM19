@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+
+	<style>
+		ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    background-color: #3f4277;
+		}
+
+		li {
+		    float: left;
+		}
+
+		li a {
+		    display: block;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+		    background-color: #5357ad;
+		}
+
+		.active {
+		    background-color: #6f75e2;
+		}
+		body{
+		  color: black;
+		  font-family:verdana;
+		  margin: 0;
+		}
+
+		.cmt{
+			box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+			background: rgba(0,0,0,.24);
+			margin: auto;
+			margin-top: 10%;
+			width: 30%;
+			height: 56%;
+			border: 5px rgba(0,0,0,.24);
+			padding: 30px;
+			text-align: center;
+		}
+
+		textarea {
+   			resize: none;
+		}
+
+		input{
+			font-family: verdana;
+			background: #c8c8c8;
+			border: 5px rgba(0,0,0,.24);
+			border: none;
+			border-radius: 25px;
+			padding: 10px 30px;
+			color: white;
+		}
+
+		textarea{
+			background: #c8c8c8;
+			border: 5px rgba(0,0,0,.24);
+			border: none;
+			border-radius: 25px;
+			padding: 10px 30px;
+			color: white;
+			padding-bottom: 60px;
+		}
+
+		button{
+			border: none;
+			padding: 15px 20px;
+			border-radius: 25px;
+			background: #3f4277;
+			color: white;
+
+		}
+		.btnh1:hover {
+		    background-color: #5357ad;
+		    color: white;	
+		}
+	</style>
+<!--http://shops-weight.gq/img/starenhoumet.png-->
+<!-- style="background: url(http://www.scottelectrical.co.nz/media/wysiwyg/data_suppliers.jpg) no-repeat; background-size: cover; font-family: 'Open Sans',sans-serif"-->
+</head>
+<body background="img/bck_tt.jpg">
+	<ul>
+  	<li><a href="home.html">Home</a></li>
+  	<li><a class="active" href="comments.html">News</a></li>
+  	<li><a href="#">Contact</a></li>
+  	<li><a href="#">About</a></li>
+  	</ul>
+  	<div class="cmt">
+	  	<form method="POST" action="adicionar.php">
+	  		<input type="hidden" name="uid" value="Anonymous">
+	  		<input type="hidden" name="date" value="">
+	  		<input type="text" name="email" placeholder="Email" style="width: 50%;"><br><br>
+	  		<input type="date" name="data" placeholder="Data (2018-03-07)" style="width: 50%;"><br><br>
+	  		<textarea name="message" placeholder="Comment" style="width: 50%; font-family: verdana; font-size: 13px;"></textarea><br><br>
+	  		<button class="btnh1" type="submit" name="submit" style="margin-bottom: 10px;">Comment</button><br>
+			<a href="listarcomentarios.php">Comentarios</a>
+	  	</form> 
+  	</div>
+</body>
+</html>
