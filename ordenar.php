@@ -1,4 +1,5 @@
-<?php 
+
+<?php header('Content-type: text/html; charset=utf-8');
     include("ligaBD.php");
     if(!isset($_POST["ordenar"])) {
     $ordenar="Dat";
@@ -6,7 +7,7 @@
     else {
     $ordenar=$_POST["ordenar"];
     }
-    if($ordenar=='Date'){
+    if($ordenar=='Dat'){
     $ordenar_por="order by Dat desc";
     }
 
